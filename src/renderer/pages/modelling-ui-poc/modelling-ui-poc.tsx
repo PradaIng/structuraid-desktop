@@ -47,6 +47,18 @@ const ModellingUiPoc = () => {
         >
           2D Columns
         </Link>
+        <Link
+          to={ROUTES.MODELLING_UI_POC.COLUMN_SYSTEM}
+          className="font-bold text-xl hover:text-blue-500 transition-all"
+        >
+          Columns System
+        </Link>
+        <Link
+          to={ROUTES.MODELLING_UI_POC.COLUMN_GROUP}
+          className="font-bold text-xl hover:text-blue-500 transition-all"
+        >
+          Columns Group
+        </Link>
       </ul>
     </div>
   );
