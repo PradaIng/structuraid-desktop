@@ -1,0 +1,64 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { COLORS } from '../../../constants'
+
+import Checkbox from './checkbox';
+
+<Meta title="Atoms/Checkbox" component={Checkbox} />
+
+export const Template = (args) => {
+  return (
+    <div style={{
+      padding: '30px',
+      background: args.color === 'dark' ? COLORS.PRIMARY : COLORS.BLUE_WHITE
+    }}>
+      <Checkbox {...args} />
+    </div>
+  )
+};
+
+# Checkbox Field
+
+##  Usage
+
+This is the `Checkbox` atom.
+
+<Canvas>
+  <Story
+    name="default"
+    args={{
+      children: "Click me"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Use the `checked` and `onChange` props to control it
+
+<Canvas>
+  <Story
+    name="controlled"
+    args={{
+      checked: true,
+      onChange: (value) => alert(value),
+      children: "Click me"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Use the `disabled` prop to make it unusable.
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      disabled: true,
+      children: "Click me",
+      checked: false
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
